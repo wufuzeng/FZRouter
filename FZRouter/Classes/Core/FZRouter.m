@@ -107,29 +107,26 @@
     
     if ([path containsString:@"http"]) {
         UIViewController *currentViewController = [UIViewController fz_currentViewController];
-        if (NSClassFromString(entry.className) == [currentViewController class] &&
-            [entry.routerUrl isEqualToString:path]) {
-            //刷新
-            entry.callbackBlock = callBack;
+        
+        if ([FZRouter globalRouter].URLHandler) {
             UIViewController* html = [FZRouter globalRouter].URLHandler(path,entry);
-            SEL refreshSEL = NSSelectorFromString(@"fz_refresh");
-            if ([html respondsToSelector:refreshSEL]) {
+            entry.callbackBlock = callBack;
+            
+            if (NSClassFromString(entry.className) == [currentViewController class] &&
+                [entry.routerUrl isEqualToString:path]) {
+                SEL refreshSEL = NSSelectorFromString(@"fz_refresh");
+                if ([html respondsToSelector:refreshSEL]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-                [html performSelector:refreshSEL withObject:nil];
+                    [html performSelector:refreshSEL withObject:nil];
 #pragma clang diagnostic pop
-            }else{
-                //NSLog(@"类[%@]-(void)fz_refresh;方法无法响应",NSStringFromClass([html class]));
-                @throw [NSException exceptionWithName:@"FZRouter Error:"
-                                               reason:[NSString stringWithFormat:@"类[%@]-(void)fz_refresh;方法无法响应",NSStringFromClass([html class])]
-                                             userInfo:nil];
-            }
-        } else {
-            //访问网页
-            if ([FZRouter globalRouter].URLHandler) {
-                entry.callbackBlock = callBack;
-                UIViewController* html = [FZRouter globalRouter].URLHandler(path,entry);
-                
+                }else{
+                    //NSLog(@"类[%@]-(void)fz_refresh;方法无法响应",NSStringFromClass([html class]));
+                    @throw [NSException exceptionWithName:@"FZRouter Error:"
+                                                   reason:[NSString stringWithFormat:@"类[%@]-(void)fz_refresh;方法无法响应",NSStringFromClass([html class])]
+                                                 userInfo:nil];
+                }
+            } else {
                 if (target.navigationController) {
                     [target.navigationController pushViewController:html animated:YES];
                 } else {
@@ -141,7 +138,13 @@
                     }
                 }
             }
+        }else{
+            @throw [NSException exceptionWithName:@"FZRouter Error:"
+                                           reason:@"请配置[FZRouter globalRouter].URLHandler.(网页路由需指定用于网页显示的Web ViewController)"]
+                                         userInfo:nil];
         }
+        
+        
         
     } else if ([entry.routerUrl hasPrefix:[FZRouter local:@""]]) {
         
