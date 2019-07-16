@@ -1,9 +1,4 @@
 # 你刚好需要，我刚好出现，请赏一颗小星星.
-
-<p align="center" >
-路由处理逻辑
-</p>
-<img src="https://github.com/wufuzeng/FZRouter/blob/master/Screenshots/FZRouter%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6.png" title="" float=left width = '1000px'>
  
 # FZRouter
 ##  特征
@@ -89,7 +84,9 @@ pod 'FZRouter'
 //swif代码
 
 ```
-
+ 
+## 路由处理逻辑
+<img src="https://github.com/wufuzeng/FZRouter/blob/master/Screenshots/FZRouter%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6.png" title="" float=left width = '1000px'>
 
 ## 作者
 
