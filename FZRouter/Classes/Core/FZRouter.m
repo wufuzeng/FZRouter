@@ -14,9 +14,6 @@
  
  local://www.xxx.com/VCIdentification?q=funcName&param1=value1&param2=value2&param1=value3
  
- @throw [NSException exceptionWithName:@"NavigationControllerNotProvided"
- reason:@"Router#navigationController has not been set to a UINavigationController instance"
- userInfo:nil];
  */
 
 #import "FZRouter.h"
@@ -48,14 +45,19 @@
             [[FZRouter globalRouter].dic_routes addEntriesFromDictionary:dic_routes];
         }
     } else {
-        NSLog(@"<<<<<<<< Error:no found profile：%@.plist >>>>>>>",profile);
-        
+        //NSLog(@"<<<<<<<< Error:not found profile：%@.plist >>>>>>>",profile);
+        @throw [NSException exceptionWithName:@"FZRouter Error:"
+                                       reason:[NSString stringWithFormat:@"not found profile：%@.plist",profile]
+                                     userInfo:nil];
     }
 }
 +(void)addRouteWithKey:(NSString *)key vcName:(NSString *)vcName{
     NSMutableDictionary *routes = [FZRouter globalRouter].dic_routes;
     if (routes[key]) {
-        NSLog(@"<<<<<<<< Error:%@ route already exists >>>>>>>",key);
+        //NSLog(@"<<<<<<<< Error:%@ route already exists >>>>>>>",key);
+        @throw [NSException exceptionWithName:@"FZRouter Error:"
+                                       reason:[NSString stringWithFormat:@"%@ route already exists",key]
+                                     userInfo:nil];
     }else{
         routes[key] = vcName;
     }
@@ -116,7 +118,10 @@
                 [html  performSelector:refreshSEL withObject:nil];
 #pragma clang diagnostic pop
             }else{
-                NSLog(@"类[%@]-(void)fz_refresh;方法无法响应",NSStringFromClass([html class]))；
+                //NSLog(@"类[%@]-(void)fz_refresh;方法无法响应",NSStringFromClass([html class]));
+                @throw [NSException exceptionWithName:@"FZRouter Error:"
+                                               reason:[NSString stringWithFormat:@"类[%@]-(void)fz_refresh;方法无法响应",NSStringFromClass([html class])]
+                                             userInfo:nil];
             }
         } else {
             //访问网页
@@ -152,7 +157,10 @@
             [FZRouter present:entry target:target callBack:callBack];
         }
     } else{
-        NSLog(@"Error:\"%@\" cannot be recognized",path);
+        //NSLog(@"Error:\"%@\" cannot be recognized",path);
+        @throw [NSException exceptionWithName:@"FZRouter Error:"
+                                       reason:[NSString stringWithFormat:@"Error:\"%@\" cannot be recognized",path]
+                                     userInfo:nil];
     }
 }
 
