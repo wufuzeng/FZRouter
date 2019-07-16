@@ -1,23 +1,23 @@
 //
-//  FZViewController.m
-//  FZRouter
+//  FZTestOneViewController.m
+//  FZRouter_Example
 //
-//  Created by wufuzeng on 07/10/2019.
-//  Copyright (c) 2019 wufuzeng. All rights reserved.
+//  Created by 吴福增 on 2019/7/10.
+//  Copyright © 2019 wufuzeng. All rights reserved.
 //
 
-#import "FZViewController.h"
+#import "FZTestOneViewController.h"
 
-@interface FZViewController ()
+@interface FZTestOneViewController ()
 
 @end
 
-@implementation FZViewController
+@implementation FZTestOneViewController
 
-- (void)viewDidLoad{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Zero";
-    
+    self.title = @"第一个";
+    self.view.backgroundColor = [UIColor redColor];
     
     UIButton * button = [UIButton new];
     button.backgroundColor = [UIColor blueColor];
@@ -25,13 +25,11 @@
     button.center = self.view.center;
     [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-    
-    
 }
 
 -(void)buttonAction:(UIButton *)sender{
     
-    [FZRouter open:@"local://key1"];
+    [FZRouter open:@"local://key2"];
 }
 
 @end

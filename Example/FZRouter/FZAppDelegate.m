@@ -8,11 +8,44 @@
 
 #import "FZAppDelegate.h"
 
+#import "FZViewController.h"
+#import "FZTestOneViewController.h"
+#import "FZTestTwoViewController.h"
+#import "FZTestThreeViewController.h"
+
 @implementation FZAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+   
+    UITabBarController *tab = [UITabBarController new];
+    
+    
+    {
+        UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:[FZTestOneViewController new]];
+        [tab addChildViewController:nc];
+    }
+    
+    {
+        UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:[FZTestTwoViewController new]];
+        [tab addChildViewController:nc];
+    }
+    
+    {
+        UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:[FZTestThreeViewController new]];
+        [tab addChildViewController:nc];
+    }
+    
+    
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = tab;
+    [self.window makeKeyAndVisible];
+    
+    [FZRouter globalRouter].localScheme = @"local";
+    [FZRouter globalRouter].unique = true;
+    [FZRouter registerRoutesWithProfile:@"RouterProfile"];
+    
     return YES;
 }
 
