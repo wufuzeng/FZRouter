@@ -98,6 +98,7 @@
     [FZRouter open:path target:target callBack:nil];
 }
 
+
 +(void)open:(NSString *)path target:(UIViewController * _Nullable)target callBack:(void(^_Nullable)(NSDictionary * _Nullable userInfo))callBack{
     
     FZRouterEntry* entry = [[FZRouterEntry alloc]initWithUrl:path];
@@ -112,10 +113,10 @@
             entry.callbackBlock = callBack;
             UIViewController* html = [FZRouter globalRouter].URLHandler(path,entry);
             SEL refreshSEL = NSSelectorFromString(@"fz_refresh");
-            if ([html  respondsToSelector:refreshSEL]) {
+            if ([html respondsToSelector:refreshSEL]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-                [html  performSelector:refreshSEL withObject:nil];
+                [html performSelector:refreshSEL withObject:nil];
 #pragma clang diagnostic pop
             }else{
                 //NSLog(@"类[%@]-(void)fz_refresh;方法无法响应",NSStringFromClass([html class]));
@@ -171,10 +172,10 @@
     entry.callbackBlock = callBack;
     target.fz_entry = entry;
     SEL refreshSEL = NSSelectorFromString(@"fz_refresh");
-    if ([target  respondsToSelector:refreshSEL]) {
+    if ([target respondsToSelector:refreshSEL]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [target  performSelector:refreshSEL withObject:nil];
+        [target performSelector:refreshSEL withObject:nil];
 #pragma clang diagnostic pop
     }
 }
