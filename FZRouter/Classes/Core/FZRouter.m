@@ -8,11 +8,11 @@
 
 /**
  路由路径规则定义
- scheme://host:port/path?Query=&params=
+ local://host:port/path?Query=&params=
  
- scheme://Domin/VCIdentification?q=funcName&param1=value1&param2=value2&param1=value3
+ local://Domin/VCIdentification?q=funcName&param1=value1&param2=value2&param1=value3
  
- hengmeiapp://www.xxx.com/VCIdentification?q=funcName&param1=value1&param2=value2&param1=value3
+ local://www.xxx.com/VCIdentification?q=funcName&param1=value1&param2=value2&param1=value3
  
  @throw [NSException exceptionWithName:@"NavigationControllerNotProvided"
  reason:@"Router#navigationController has not been set to a UINavigationController instance"
