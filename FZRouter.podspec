@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FZRouter'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'iOS 界面跳转路由实现'
 
 # This description is used to generate tags and improve search results.

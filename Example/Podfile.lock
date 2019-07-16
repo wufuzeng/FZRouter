@@ -1,5 +1,5 @@
 PODS:
-  - FZRouter (0.0.1)
+  - FZRouter (0.0.2)
 
 DEPENDENCIES:
   - FZRouter (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FZRouter: 6da826a826b937e36a7c7693a47d74f69d384e27
+  FZRouter: aa6834f27a4533477e8cdde429f37e1e3004900b
 
 PODFILE CHECKSUM: 6e72d39b7cfcd9166c1a06b7de8d2a77b73aa007
 

@@ -13,7 +13,6 @@
 #import "UIViewController+FZRouter.h"
 #import "FZRouter.h"
 #import "FZRouterEntry.h"
-#import "FZRouterHeader.h"
 
 FOUNDATION_EXPORT double FZRouterVersionNumber;
 FOUNDATION_EXPORT const unsigned char FZRouterVersionString[];

@@ -140,7 +140,7 @@
             }
         }else{
             @throw [NSException exceptionWithName:@"FZRouter Error:"
-                                           reason:@"请配置[FZRouter globalRouter].URLHandler.(网页路由需指定用于网页显示的Web ViewController)"]
+                                           reason:@"请配置[FZRouter globalRouter].URLHandler.(网页路由需指定用于网页显示的Web ViewController)"
                                          userInfo:nil];
         }
         
