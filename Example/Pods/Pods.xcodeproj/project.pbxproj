@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CAF2177C8EE9D322B612A2A040F5DC8 /* FZRouterHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 91CFCCDF2370C887CAC3AF47BAD297A0 /* FZRouterHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1970AECDC0E281903C76EB7A440AAA62 /* Pods-FZRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A081A12AE34103C1901BBECDEBC036 /* Pods-FZRouter_Example-dummy.m */; };
 		2A18F9F3F37EC997E9470314C9DBC6B4 /* Pods-FZRouter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0326509370FE7A664599C8FF7927CC12 /* Pods-FZRouter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3EF19E19A9D66B308FA8041E5B1D6191 /* FZRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4868608D82F9D16FB1FDABE0004245 /* FZRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,10 +44,10 @@
 
 /* Begin PBXFileReference section */
 		0326509370FE7A664599C8FF7927CC12 /* Pods-FZRouter_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FZRouter_Tests-umbrella.h"; sourceTree = "<group>"; };
-		0AD32B4DBD50314999F0B9FB3BDD3A12 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		11CB60BEE9AA6604332A957DBB373B1B /* Pods_FZRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FZRouter_Example.framework; path = "Pods-FZRouter_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AD32B4DBD50314999F0B9FB3BDD3A12 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		11CB60BEE9AA6604332A957DBB373B1B /* Pods_FZRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FZRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD9DC1902CBADD1281623ADA52EEAB9 /* FZRouter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FZRouter.xcconfig; sourceTree = "<group>"; };
-		2314CC344D3F79DE98F1C6D00ABFB50F /* Pods_FZRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FZRouter_Tests.framework; path = "Pods-FZRouter_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2314CC344D3F79DE98F1C6D00ABFB50F /* Pods_FZRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FZRouter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4868608D82F9D16FB1FDABE0004245 /* FZRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FZRouter.h; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		3672D1612BD7F389C2E6AF4E8AEF7CD7 /* UIViewController+FZRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FZRouter.m"; sourceTree = "<group>"; };
@@ -65,17 +64,16 @@
 		6DE9BFD207E9C880EC619561EAF3FD1B /* Pods-FZRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FZRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		73CEE0B7485A4A038DA039DFD64D5C3B /* Pods-FZRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FZRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		77746F01B300A2C90B4BBC3A5E2E81E8 /* Pods-FZRouter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FZRouter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8141BF8E4CFD20514F43340520CD4BD0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		8141BF8E4CFD20514F43340520CD4BD0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		86C5163C242F6687C6A74C2AD95FC485 /* FZRouterEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FZRouterEntry.h; sourceTree = "<group>"; };
 		8CD175C29F777F56A39D823288656916 /* Pods-FZRouter_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FZRouter_Example-umbrella.h"; sourceTree = "<group>"; };
 		8D3B64815F86978B8BA9841DB85A90EF /* FZRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FZRouter-prefix.pch"; sourceTree = "<group>"; };
-		91CFCCDF2370C887CAC3AF47BAD297A0 /* FZRouterHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FZRouterHeader.h; path = FZRouter/Classes/FZRouterHeader.h; sourceTree = "<group>"; };
 		9439353DC3FD092738981E64CAE135AF /* FZRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FZRouter-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A058E52175EA6C8A5FB2F0F19C20DD23 /* Pods-FZRouter_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FZRouter_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A524634A13C3EE4C531B938AD669F70D /* Pods-FZRouter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FZRouter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		AC4EBF6F68130B7CA8FA88678A35227E /* FZRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FZRouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B910E7F74F82F06ECD4612E886D0B339 /* FZRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FZRouter.framework; path = FZRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC4EBF6F68130B7CA8FA88678A35227E /* FZRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = FZRouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B910E7F74F82F06ECD4612E886D0B339 /* FZRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FZRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC61CAD17C6C8E75C1F0EF84CBC257FC /* UIViewController+FZRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FZRouter.h"; sourceTree = "<group>"; };
 		BFAD4EC295E017F9DBB05896B13A9731 /* Pods-FZRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FZRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C28917FAF952FAF248015B172F20B3CD /* Pods-FZRouter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FZRouter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -211,7 +209,6 @@
 		A42EE2E93FCFD741D2E5BC5C60AFCEC4 /* FZRouter */ = {
 			isa = PBXGroup;
 			children = (
-				91CFCCDF2370C887CAC3AF47BAD297A0 /* FZRouterHeader.h */,
 				DD5AB4FBA8312969D18A57FEC8F4DAD8 /* Category */,
 				2B6B4B97862DAB85F9974A310A3ED459 /* Core */,
 				5D989777675984C5FFB51904F7A01C01 /* Pod */,
@@ -279,7 +276,6 @@
 				ECD291A203E4E037219DE289DDDB77F0 /* FZRouter-umbrella.h in Headers */,
 				3EF19E19A9D66B308FA8041E5B1D6191 /* FZRouter.h in Headers */,
 				6BB1AFAD7D8A17ED8AF160901645D849 /* FZRouterEntry.h in Headers */,
-				0CAF2177C8EE9D322B612A2A040F5DC8 /* FZRouterHeader.h in Headers */,
 				895ADC3D9435DEAE4E8ACD5F8391E227 /* UIViewController+FZRouter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,8 +498,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
